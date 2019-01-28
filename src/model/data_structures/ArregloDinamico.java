@@ -27,7 +27,7 @@ public class ArregloDinamico <T>implements IArregloDinamico<T> {
          */
 		public ArregloDinamico( int max )
         {
-               elementos = (T[]) new Object [max];
+               elementos = (T[]) new Comparable [max];
                tamanoMax = max;
                tamanoAct = 0;
         }
@@ -71,9 +71,9 @@ public class ArregloDinamico <T>implements IArregloDinamico<T> {
 			// TODO Auto-generated method stub
 			// TODO implementar
 			T e=null;
-			for(int i=0;i<elementos.length;i++)
+			for(int i=0;i<tamanoAct;i++)
 			{
-				if(elementos[i]==dato)
+				if(elementos[i].equals(dato) == true)
 				{
 					e=elementos[i];
 				}
@@ -85,14 +85,16 @@ public class ArregloDinamico <T>implements IArregloDinamico<T> {
 			// TODO Auto-generated method stub
 			// TODO implementar
 			T e=null;
-			for(int i=0;i<elementos.length;i++)
+			for(int i=0;i<tamanoAct;i++)
 			{
-				if(elementos[i]==dato)
+				if(elementos[i].equals(dato) == true)
 				{
 					e=elementos[i];
 					elementos[i]=null;
+					tamanoAct--;
 				}
 			}
+			
 			return e;
 		}
 }

@@ -27,14 +27,14 @@ public class MVCExample {
 			while( !fin ){
 				printMenu();
 
-				int option = lector.nextInt();
+int option = lector.nextInt();
 				switch(option){
 					case 1:
 						System.out.println("--------- \nCrear Arreglo \nDar capacidad inicial del arreglo: ");
 					    int capacidad = lector.nextInt();
 						Controller.crearModelo(capacidad); 
 						System.out.println("Arreglo Dinamico creado");
-						System.out.println("Numero actual de elementos " + Controller.darTamano() + "\n---------");						
+						System.out.println("Numero actual de elementos " + Controller.darTamano() + "\n---------");	
 						break;
 
 					case 2:
